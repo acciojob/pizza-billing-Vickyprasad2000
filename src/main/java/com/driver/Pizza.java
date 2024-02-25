@@ -45,21 +45,15 @@ public class Pizza {
             if(isVeg)
             {
                 this.price += 70;
-            }
-            else
-            {
-                this.price += 120;
-            }
-            extraToppingsAdded = true;
-            this.bill += "Extra Toppings Added: ";
-            if(isVeg)
-            {
                 this.bill += "70\n";
             }
             else
             {
+                this.price += 120;
                 this.bill += "120\n";
             }
+            extraToppingsAdded = true;
+            this.bill += "Extra Toppings Added: ";
         }
     }
     public int getTopping()
@@ -71,10 +65,10 @@ public class Pizza {
         // your code goes here
         if(!paperBagAdded)
         {
+            paperBagAdded = true;
             this.price += paperBagPrice;
+            this.bill += "Paper Bag Added: 20\n";
         }
-        paperBagAdded = true;
-        this.bill += "Paper Bag Added: 20\n";
     }
     public int getPaperBagPrice()
     {
