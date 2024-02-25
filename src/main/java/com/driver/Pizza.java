@@ -17,6 +17,7 @@ public class Pizza {
             this.price = 300;
         else
             this.price = 400;
+        this.bill = "Base price of Pizza: " + this.price + "\n";
     }
 
     public int getPrice(){
@@ -29,7 +30,7 @@ public class Pizza {
         {
             this.price += 80;
             extraCheeseAdded = true;
-            this.bill += "Extra Cheese Added: 80\n";
+            this.bill += "Extra Cheese Added:" + this.price + "\n";
         }
     }
     public int getCheese()
@@ -53,7 +54,7 @@ public class Pizza {
                 this.bill += "120\n";
             }
             extraToppingsAdded = true;
-            this.bill += "Extra Toppings Added: ";
+            this.bill += "Extra Toppings Added:" + this.price + "\n";
         }
     }
     public int getTopping()
@@ -67,7 +68,7 @@ public class Pizza {
         {
             paperBagAdded = true;
             this.price += paperBagPrice;
-            this.bill += "Paper Bag Added: 20\n";
+            this.bill += "Paper Bag Added: "+ this.price + "\n";
         }
     }
     public int getPaperBagPrice()
