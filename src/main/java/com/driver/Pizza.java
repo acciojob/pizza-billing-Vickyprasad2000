@@ -3,12 +3,12 @@ package com.driver;
 public class Pizza {
 
     private int price;
-    private boolean isVeg = true;
+    private final boolean isVeg;
     private String bill;
     private boolean extraCheeseAdded = false;
     private boolean extraToppingsAdded = false;
     private boolean paperBagAdded = false;
-    private int paperBagPrice = 20;
+    private final int paperBagPrice = 20;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
@@ -59,7 +59,7 @@ public class Pizza {
         {
            paperBagAdded = true;
             this.price += paperBagPrice;
-            this.bill += "Paper Bag Added: 20\n";
+            this.bill += "Paper bag Added: 20\n";
         }
     }
 
