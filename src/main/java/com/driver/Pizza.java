@@ -66,8 +66,10 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        if(!isbill)
-             this.bill += "Total Price: " + this.getPrice()+"\n";
+        if(!isbill) {
+            isbill = true;
+            this.bill += "Total Price: " + this.getPrice() + "\n";
+        }
         return this.bill;
     }
 }
