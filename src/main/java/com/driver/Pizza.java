@@ -3,24 +3,21 @@ package com.driver;
 public class Pizza {
 
     private int price;
-    private final Boolean isVeg;
+    private boolean isVeg = true;
     private String bill;
-    private boolean extraCheeseAdded;
-    private boolean extraToppingsAdded;
-    private boolean paperBagAdded;
-    private final int paperBagPrice = 20;
+    private boolean extraCheeseAdded = false;
+    private boolean extraToppingsAdded = false;
+    private boolean paperBagAdded = false;
+    private int paperBagPrice;
 
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        if(isVeg) {
+        if(isVeg)
             this.price = 300;
-            this.bill = "Base price of Pizza: 300\n";
-        }
-        else {
+        else
             this.price = 400;
-            this.bill = "Base price of Pizza: 400\n";
-        }
+        this.bill = "Base Price of Pizza: "+ this.price+"\n";
     }
 
     public int getPrice(){
@@ -35,10 +32,6 @@ public class Pizza {
             extraCheeseAdded = true;
             this.bill += "Extra Cheese Added: 80\n";
         }
-    }
-    public int getCheese()
-    {
-        return this.price;
     }
 
 
@@ -60,23 +53,14 @@ public class Pizza {
 
         }
     }
-    public int getTopping()
-    {
-        return this.price;
-    }
-
     public void addTakeaway(){
         // your code goes here
         if(!paperBagAdded)
         {
-            paperBagAdded = true;
-            this.price += paperBagPrice;
+           paperBagAdded = true;
+            this.price += 20;
             this.bill += "Paper Bag Added: 20\n";
         }
-    }
-    public int getPaperBagPrice()
-    {
-        return this.paperBagPrice;
     }
 
     public String getBill(){
